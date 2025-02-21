@@ -22,3 +22,11 @@ val TextStyle1 = TextStyle(
     fontSize = SP_25,
     color = Black,
 )
+
+/**
+ * Style Button
+ */
+
+val TextButtonStyle1 = TextStyle(
+    fontSize = SP_16, color = White
+)

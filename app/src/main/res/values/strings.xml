@@ -3,4 +3,7 @@
 
     <!-- Text -->
     <string name="date_show_text">Haga se mostrar la fecha</string>
+
+    <!-- Button -->
+    <string name="show_date_button">Mostrar fecha</string>
 </resources>
