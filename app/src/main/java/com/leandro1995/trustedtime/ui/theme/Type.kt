@@ -14,3 +14,11 @@ val Typography = Typography(
         letterSpacing = SP_0_5
     )
 )
+
+/**
+ * Style App
+ */
+val TextStyle1 = TextStyle(
+    fontSize = SP_25,
+    color = Black,
+)

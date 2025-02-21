@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TrustedTime</string>
+
+    <!-- Text -->
+    <string name="date_show_text">Haga se mostrar la fecha</string>
 </resources>
