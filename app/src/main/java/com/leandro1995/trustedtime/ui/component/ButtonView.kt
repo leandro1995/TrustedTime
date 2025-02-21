@@ -12,17 +12,19 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import com.leandro1995.trustedtime.ui.component.ambient.View
 import com.leandro1995.trustedtime.ui.theme.DP_40
+import com.leandro1995.trustedtime.ui.theme.TextButtonStyle1
 
 class ButtonView(
     private val text: String = "",
     modifier: Modifier = Modifier,
     textAlign: TextAlign = TextAlign.Center,
     alignment: Alignment.Horizontal = Alignment.Start,
-) : View(modifier = modifier, textAlign = textAlign, alignment = alignment) {
+    textStyle: TextStyle = TextButtonStyle1,
+) : View(modifier = modifier, textAlign = textAlign, alignment = alignment, style = textStyle) {
 
     @Composable
-    override fun Modifier(style: TextStyle) {
-        super.Modifier(style)
+    override fun ComposeComponent() {
+        super.ComposeComponent()
 
         Column(horizontalAlignment = alignmentMutable.value, modifier = Modifier.fillMaxWidth()) {
             Button(onClick = { onClickCallBack?.onClick() }, modifier = modifier.height(DP_40)) {

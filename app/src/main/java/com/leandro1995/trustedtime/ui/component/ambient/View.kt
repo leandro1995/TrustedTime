@@ -13,6 +13,7 @@ abstract class View(
     protected val modifier: Modifier = Modifier,
     protected val textAlign: TextAlign = TextAlign.Start,
     protected val alignment: Alignment.Horizontal = Alignment.Start,
+    protected val style: TextStyle = TextStyle(),
 ) {
 
     /**
@@ -31,10 +32,10 @@ abstract class View(
     protected var onClickCallBack: OnClickCallBack? = null
 
     /**
-     * @param style : Parametro que permite colocar el style de la app
+     * Funcion para creacion de componente en los otras clases
      */
     @Composable
-    open fun Modifier(style: TextStyle) {
+    open fun ComposeComponent() {
         InstanceValuesDesign()
     }
 

@@ -12,11 +12,12 @@ class TextView(
     private val text: String = "",
     modifier: Modifier = Modifier,
     textAlign: TextAlign = TextAlign.Start,
-) : View(modifier = modifier, textAlign = textAlign) {
+    style: TextStyle = TextStyle(),
+) : View(modifier = modifier, textAlign = textAlign, style = style) {
 
     @Composable
-    override fun Modifier(style: TextStyle) {
-        super.Modifier(style)
+    override fun ComposeComponent() {
+        super.ComposeComponent()
 
         Text(
             text = text,

@@ -17,7 +17,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.leandro1995.trustedtime.ui.component.ButtonView
 import com.leandro1995.trustedtime.ui.component.TextView
 import com.leandro1995.trustedtime.ui.theme.DP_15
-import com.leandro1995.trustedtime.ui.theme.TextButtonStyle1
 import com.leandro1995.trustedtime.ui.theme.TextStyle1
 import com.leandro1995.trustedtime.ui.theme.TrustedTimeTheme
 
@@ -38,7 +37,9 @@ class MainActivity : ComponentActivity() {
     @Composable
     private fun InstanceDesign() {
         dateText = TextView(
-            text = stringResource(R.string.date_show_text), textAlign = TextAlign.Center
+            text = stringResource(R.string.date_show_text),
+            textAlign = TextAlign.Center,
+            style = TextStyle1
         )
         dateButton = ButtonView(
             text = stringResource(R.string.show_date_button),
@@ -50,9 +51,9 @@ class MainActivity : ComponentActivity() {
     private fun View() {
         TrustedTimeTheme {
             Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center) {
-                dateText.Modifier(style = TextStyle1)
+                dateText.ComposeComponent()
                 Spacer(modifier = Modifier.height(DP_15))
-                dateButton.Modifier(style = TextButtonStyle1)
+                dateButton.ComposeComponent()
             }
         }
     }
