@@ -1,6 +1,7 @@
 package com.leandro1995.trustedtime
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -14,6 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.leandro1995.trustedtime.config.Setting
+import com.leandro1995.trustedtime.trustedtime.TrustedTime
 import com.leandro1995.trustedtime.ui.component.ButtonView
 import com.leandro1995.trustedtime.ui.component.TextView
 import com.leandro1995.trustedtime.ui.theme.DP_15
@@ -60,7 +63,7 @@ class MainActivity : ComponentActivity() {
 
     private fun onClick() {
         dateButton.setOnclick {
-
+            Log.e("ENTRA", "${TrustedTime.date(format = Setting.DATE_FORMAT_ONE)} <---")
         }
     }
 
