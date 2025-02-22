@@ -1,7 +1,6 @@
 package com.leandro1995.trustedtime
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -63,7 +62,7 @@ class MainActivity : ComponentActivity() {
 
     private fun onClick() {
         dateButton.setOnclick {
-            Log.e("ENTRA", "${TrustedTime.date(format = Setting.DATE_FORMAT_ONE)} <---")
+            dateText.setText(text = TrustedTime.date(format = Setting.DATE_FORMAT_ONE))
         }
     }
 
